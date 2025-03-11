@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="score">Wins: <span id="wins">0</span></div>
+            <h1>Word Hunt</h1>
+            <div class="controls">
+                <button id="rules">?</button>
+                <button id="new-game">New</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="guess-grid">
+                <div class="grid-row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+            </div>
+
+            <div id="word-list"></div>
+
+            <input type="text" id="word-input" maxlength="5" placeholder="type a word" autocomplete="off">
+            <div id="message"></div>
+        </main>
+        <div id="win-modal" class="modal">
+            <div class="modal-content">
+                <h2>🎉 Congratulations! 🎉</h2>
+                <div class="win-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Secret Word:</span>
+                        <span id="win-word" class="stat-value"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Solved in:</span>
+                        <span id="win-tries" class="stat-value"></span> tries
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Wins:</span>
+                        <span id="wins" class="stat-value">0</span>
+                    </div>
+                </div>
+                <div class="win-buttons">
+                    <button id="play-again">Play Again</button>
+                    <button id="share-score">Share Score</button>
+                </div>
+            </div>
+        </div>
+        <div id="rules-modal" class="modal">
+            <div class="modal-content rules-content">
+                <h2 class="rules-title">How to Play</h2>
+                
+                <div class="rules-section">
+                    <div class="rule-block goal-block">
+                        <h3>Goal</h3>
+                        <p>Find the secret 5-letter word in 6 tries</p>
+                    </div>
+
+                    <div class="rule-block example-block">
+                        <h3>Color Guide</h3>
+                        <div class="color-examples">
+                            <div class="example-item">
+                                <span class="color-text correct-text">GREEN</span>
+                                <span>Correct letter, right spot</span>
+                            </div>
+                            <div class="example-item">
+                                <span class="color-text present-text">YELLOW</span>
+                                <span>Right letter, wrong spot</span>
+                            </div>
+                            <div class="example-item">
+                                <span class="color-text absent-text">GREY</span>
+                                <span>Letter not in word</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-block tips-block">
+                        <h3>Tips</h3>
+                        <ul class="tips-list">
+                            <li>Use word list for hints</li>
+                            <li>Must be real 5-letter words</li>
+                            <li>Letters can repeat</li>
+                            <li>Try E, A, R, T first</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-block controls-block">
+                        <h3>Steps</h3>
+                        <ol class="controls-list">
+                            <li>Type a word</li>
+                            <li>Press Enter</li>
+                            <li>Check colors</li>
+                            <li>Repeat</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <button id="close-rules" class="start-button">Play</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
