@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text on Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            max-width: 90%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="image.png" alt="Cake Image">
+        <div class="overlay-text">
+            Baking Memories, One Slice at a Time. <br>
+            Where Every Bite is a Sweet Delight. <br>
+            Cakes that Make Life Sweeter.
+        </div>
+    </div>
+
+</body>
+</html>

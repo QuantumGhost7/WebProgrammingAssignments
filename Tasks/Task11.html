@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        h1 {
+            font-family: "Brush Script MT", cursive;
+            font-size: 50px;
+            color: darkolivegreen;
+        }
+
+        .class-selector {
+            color: deepskyblue;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #id-selector {
+            background-color: cyan;
+            font-size: 20px;
+            font-weight: bold;
+            color: olive;
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        .blue-text {
+            color: blue;
+        }
+
+        .container {
+            background-color: lightcyan;
+            padding: 10px;
+        }
+
+        .number-container {
+            background-color: lavenderblush;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .number-container p:nth-child(odd) {
+            color: navy;
+        }
+
+        .number-container p:nth-child(even) {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS SELECTORS</h1>
+
+    <p class="class-selector">I'm a class selector</p>
+
+    <p id="id-selector">I'm the ID selector. Here I am a boss</p>
+
+    <div class="container">
+        <p class="red-text">I'm red</p>
+        <p class="red-text">I'm also red</p>
+        <p class="blue-text">What is going on? why am I blue?!</p>
+    </div>
+
+    <div class="number-container">
+        <p>I'm odd number</p>
+        <p>I'm even number</p>
+        <p>I'm also odd number</p>
+        <p>Hm..I'm even number</p>
+    </div>
+
+</body>
+</html>
+

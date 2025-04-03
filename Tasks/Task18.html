@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Div Layout Exercise</title>
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 12px; /* Div One has 12px between it and any other element */
+        }
+
+        .div-one {
+            border: 4px solid blue; /* Thicker border */
+            background-color: pink;
+            padding: 32px;
+            margin-bottom: 12px;
+            width: 80%; /* Make Div One shorter than Div Two */
+        }
+
+        .div-two {
+            border: 4px solid purple; /* Thicker border */
+            background-color: lightblue;
+            padding: 32px;
+            margin-bottom: 48px;
+            width: 100%; /* Full width */
+        }
+
+        .div-three {
+            border: 4px solid red; /* Thicker border */
+            background-color: peachpuff;
+            padding: 32px;
+            width: 300px; /* Fixed width for larger rectangular shape */
+            height: 150px; /* Added height for rectangular shape */
+            margin-left: auto; /* Align to the right */
+            display: flex;
+            align-items: center; /* Center text vertically */
+            justify-content: center; /* Center text horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div-one">
+            DIV ONE
+        </div>
+        
+        <div class="div-two">
+            DIV TWO
+        </div>
+        
+        <div class="div-three">
+            DIV THREE
+        </div>
+    </div>
+</body>
+</html>

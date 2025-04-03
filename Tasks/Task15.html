@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task-15: Repeated Cake Images</title>
+    <style>
+        body {
+            background-color: #a2b5bd;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            background-color: white;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            border: 2px solid black;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        
+        /* Method 1: Using grid layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .grid-container img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Method 2: Using background-repeat */
+        .background-repeat {
+            height: 500px;
+            margin: 20px 0;
+            background-image: url('https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg');
+            background-size: 200px auto;
+            background-repeat: repeat;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task-15</h1>
+    
+    <div class="container">
+        <h2>Method 1: Using Grid Layout</h2>
+        <div class="grid-container">
+            <!-- Repeat the image 9 times (3x3 grid) -->
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1743054731/user_uploads/MSJqafOzoLwOpVT/image.jpg" alt="Chocolate Cake">
+        </div>
+        
+        <h2>Method 2: Using CSS Background Repeat</h2>
+        <div class="background-repeat"></div>
+    </div>
+</body>
+</html>

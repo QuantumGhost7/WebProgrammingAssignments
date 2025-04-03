@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Border Properties</title>
+    <style>
+        .box {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Red dotted border with specific instructions */
+        .red-dotted {
+            border-style: dotted;
+            border-color: red;
+            border-width: 3px;
+        }
+
+        /* Border style shorthand with order: top, right, bottom, left */
+        .border-shorthand {
+            border-style: solid dashed groove ridge;
+        }
+
+        /* Border width, style, and color */
+        .border-width-style-color {
+            border: 2px solid blue;
+        }
+
+        /* Another border shorthand example */
+        .border-shorthand-note {
+            border-style: double;
+        }
+
+        /* Blue border example */
+        .blue-border {
+            border: 2px solid blue;
+        }
+
+        /* Override example */
+        .border-override {
+            border: 3px solid green;
+            border-top-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box red-dotted">
+        This is the example of CSS Border Style property.
+    </div>
+
+    <div class="box border-shorthand">
+        This is the example of CSS Border Style Shorthand property. The border style defines with order: top, right, bottom and then left side of HTML element.
+    </div>
+
+    <div class="box border-width-style-color">
+        This is the example of CSS Border Width, Style and Color properties.
+    </div>
+
+    <div class="box border-shorthand-note">
+        This is the example of CSS Border Style Shorthand property. Please note that border style is the only mandatory thing to set border. Border width & color is optional and those values can be taken from browsers default.
+    </div>
+
+    <div class="box blue-border">
+        This is the example of CSS Border Shorthand property.
+    </div>
+
+    <div class="box border-override">
+        You can override one border property with another or individual border property. Latest defined border property will override existing one.
+    </div>
+</body>
+</html>
