@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Web Page</title>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    
+    <p id="output"></p>
+    
+    <script>
+        // Function to append text to the output paragraph
+        function displayOutput(text) {
+            document.getElementById("output").innerHTML += text + "<br>";
+        }
+
+        // (i) Declare variables and perform basic arithmetic operations
+        let a = 10, b = 5;
+        displayOutput("Addition: " + (a + b));
+        displayOutput("Subtraction: " + (a - b));
+        displayOutput("Multiplication: " + (a * b));
+        displayOutput("Division: " + (a / b));
+
+        // (ii) Conditional Statements using if-else
+        function checkNumber(num) {
+            if (num > 0) {
+                displayOutput("The number " + num + " is positive.");
+            } else if (num < 0) {
+                displayOutput("The number " + num + " is negative.");
+            } else {
+                displayOutput("The number is zero.");
+            }
+        }
+        checkNumber(3);
+        checkNumber(-1);
+        checkNumber(0);
+
+        // (iii) Conditional Statements using Functions
+        function isEven(num) {
+            return num % 2 === 0 ? "Even" : "Odd";
+        }
+        displayOutput("Number 10 is: " + isEven(10));
+        displayOutput("Number 7 is: " + isEven(7));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+<body>
+    <h2>Find Longest Common Substring</h2>
+    <input type="text" id="string1" placeholder="Enter first string">
+    <input type="text" id="string2" placeholder="Enter second string">
+    <button onclick="findLongestSubstring()">Find Longest Substring</button>
+    <p>Longest Substring: <span id="substringResult"></span></p>
+
+    <h2>Reverse Words in a Sentence</h2>
+    <input type="text" id="sentence" placeholder="Enter a sentence">
+    <button onclick="reverseSentence()">Reverse Words</button>
+    <p>Reversed Sentence: <span id="reversedResult"></span></p>
+
+    <script>
+        function reverseWords(sentence) {
+            return sentence.split(" ").reverse().join(" ");
+        }
+
+        function reverseSentence() {
+            let sentence = document.getElementById("sentence").value;
+            let result = reverseWords(sentence);
+            document.getElementById("reversedResult").innerText = result;
+        }
+    </script>
+</body>
+</html>

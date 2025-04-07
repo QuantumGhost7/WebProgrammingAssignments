@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Web Page</title>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    
+    <p id="output"></p>
+    <button onclick="showPrompt()">Click for Prompt</button>
+    
+    <script>
+        // Using document.write()
+        document.write("<p>Document Write: Hello, World!</p>");
+
+        // Using console.log()
+        console.log("Console Log: Hello, World!");
+
+        // Using alert()
+        alert("Alert: Hello, World!");
+        
+        // Using innerHTML
+        document.getElementById("output").innerHTML = "InnerHTML: Hello, World!";
+        
+        // Using window.prompt
+        function showPrompt() {
+            let userInput = prompt("Type something:", "Hello, World!");
+            if (userInput !== null) {
+                document.write("<p>Prompt Output: " + userInput + "</p>");
+            }
+        }
+    </script>
+</body>
+</html>

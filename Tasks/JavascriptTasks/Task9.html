@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Common Substring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #result {
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 50px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Longest Common Substring Finder</h1>
+        <p>Enter two strings to find their longest common substring</p>
+        
+        <label for="string1">String 1:</label>
+        <textarea id="string1" placeholder="Enter first string"></textarea>
+        
+        <label for="string2">String 2:</label>
+        <textarea id="string2" placeholder="Enter second string"></textarea>
+        
+        <button onclick="findLongestSubstring()">Find Longest Common Substring</button>
+        
+        <h3>Result:</h3>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function longestSubstring(str1, str2) {
+            if (!str1 || !str2) return "";
+            
+            // Create a 2D array to store lengths of common substrings
+            const dp = Array(str1.length + 1).fill().map(() => Array(str2.length + 1).fill(0));
+            
+            let maxLength = 0;
+            let endIndex = 0;
+            
+            // Fill the dp table
+            for (let i = 1; i <= str1.length; i++) {
+                for (let j = 1; j <= str2.length; j++) {
+                    if (str1[i - 1] === str2[j - 1]) {
+                        dp[i][j] = dp[i - 1][j - 1] + 1;
+                        
+                        if (dp[i][j] > maxLength) {
+                            maxLength = dp[i][j];
+                            endIndex = i - 1;
+                        }
+                    }
+                }
+            }
+            
+            // Extract the substring using the maxLength and endIndex
+            return str1.substring(endIndex - maxLength + 1, endIndex + 1);
+        }
+
+        function findLongestSubstring() {
+            const str1 = document.getElementById("string1").value;
+            const str2 = document.getElementById("string2").value;
+            
+            const result = longestSubstring(str1, str2);
+            
+            document.getElementById("result").innerHTML = result 
+                ? `The longest common substring is: <strong>"${result}"</strong> (length: ${result.length})`
+                : "No common substring found";
+        }
+    </script>
+</body>
+</html>

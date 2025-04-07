@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Compression</title>
+</head>
+<body>
+    <h2>Compress String</h2>
+    <input type="text" id="compressInput" placeholder="Enter a string">
+    <button onclick="compressInputString()">Compress</button>
+    <p>Compressed String: <span id="compressedResult"></span></p>
+
+    <script>
+        function compressString(str) {
+            let compressed = "";
+            let count = 1;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === str[i + 1]) {
+                    count++;
+                } else {
+                    compressed += str[i] + count;
+                    count = 1;
+                }
+            }
+            return compressed.length < str.length ? compressed : str;
+        }
+
+        function compressInputString() {
+            let input = document.getElementById("compressInput").value;
+            let result = compressString(input);
+            document.getElementById("compressedResult").innerText = result;
+        }
+    </script>
+</body>
+</html>

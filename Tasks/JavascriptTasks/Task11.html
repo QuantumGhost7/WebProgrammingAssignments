@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Checker</title>
+</head>
+<body>
+    <h2>Check Anagrams</h2>
+    <input type="text" id="anagramStr1" placeholder="Enter first string">
+    <input type="text" id="anagramStr2" placeholder="Enter second string">
+    <button onclick="checkAnagram()">Check</button>
+    <p>Are Anagrams? <span id="anagramResult"></span></p>
+
+    <script>
+        function anagrams(str1, str2) {
+            let normalize = str => str.replace(/\s/g, '').toLowerCase().split('').sort().join('');
+            return normalize(str1) === normalize(str2);
+        }
+
+        function checkAnagram() {
+            let str1 = document.getElementById("anagramStr1").value;
+            let str2 = document.getElementById("anagramStr2").value;
+            let result = anagrams(str1, str2);
+            document.getElementById("anagramResult").innerText = result ? "Yes" : "No";
+        }
+    </script>
+</body>
+</html>
